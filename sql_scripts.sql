@@ -1,3 +1,4 @@
+-- CREACION DE TABLAS ----------------------------------------------------------------------------------------------------
 DROP TABLE IF EXISTS PERSONAL;
 DROP TABLE IF EXISTS HIJOS;
 
@@ -45,7 +46,7 @@ VALUES
 (2, 'PASAPORTE', 'CD345678', 'Martínez', 'Gómez', 'Ana', 'María', 'Ana María Martínez Gómez', '2014-11-20');
 
 
--- procedures ----------------------------------------------------------------------------------------------------
+-- PROCEDIMIENTOS ----------------------------------------------------------------------------------------------------
 
 CREATE PROCEDURE InsertPersonal
     @TipoDoc VARCHAR(15),
@@ -62,7 +63,7 @@ BEGIN
     INSERT INTO PERSONAL (TipoDoc, NumeroDoc, ApPaterno, ApMaterno, Nombre1, Nombre2, NombreCompleto, FechaNac, FechaIngreso)
     VALUES (@TipoDoc, @NumeroDoc, @ApPaterno, @ApMaterno, @Nombre1, @Nombre2, @NombreCompleto, @FechaNac, @FechaIngreso);
 END
-
+------------------------------
 
 CREATE PROCEDURE UpdatePersonal
     @idPersonal INT,
@@ -89,8 +90,7 @@ BEGIN
         FechaIngreso = @FechaIngreso
     WHERE idPersonal = @idPersonal;
 END
-
-
+------------------------------
 
 CREATE PROCEDURE DeletePersonal
     @idPersonal INT
@@ -99,23 +99,23 @@ BEGIN
     DELETE FROM PERSONAL
     WHERE idPersonal = @idPersonal;
 END
+------------------------------
 
-
-create procedure SelectAllPersonal
+CREATE PROCEDURE SelectAllPersonal
 as
 begin
 
 select * from PERSONAL
 end
+------------------------------
 
-
-create procedure QueryPersonal(@idPersonal int)
+CREATE PROCEDURE QueryPersonal(@idPersonal int)
 as
 begin
 
 select * from PERSONAL where idPersonal = @idPersonal
 end
-
+------------------------------
 
 
 CREATE PROCEDURE InsertHijo
@@ -133,7 +133,7 @@ BEGIN
     INSERT INTO HIJOS (idPersonal, TipoDoc, NumeroDoc, ApPaterno, ApMaterno, Nombre1, Nombre2, NombreCompleto, FechaNac)
     VALUES (@idPersonal, @TipoDoc, @NumeroDoc, @ApPaterno, @ApMaterno, @Nombre1, @Nombre2, @NombreCompleto, @FechaNac);
 END
-
+------------------------------
 
 CREATE PROCEDURE UpdateHijo
     @idHijo INT,
@@ -160,7 +160,7 @@ BEGIN
         FechaNac = @FechaNac
     WHERE idHijo = @idHijo;
 END
-
+------------------------------
 
 CREATE PROCEDURE DeleteHijo
     @idHijo INT
@@ -169,18 +169,17 @@ BEGIN
     DELETE FROM HIJOS
     WHERE idHijo = @idHijo;
 END
+------------------------------
 
-
-
-create procedure SelectAllHijos
+CREATE PROCEDURE SelectAllHijos
 as
 begin
 
 select * from HIJOS
 end
+------------------------------
 
-
-create procedure QueryHijos(@idHijo int)
+CREATE PROCEDURE QueryHijos(@idHijo int)
 as
 begin
 
