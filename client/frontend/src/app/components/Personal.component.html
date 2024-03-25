@@ -1,0 +1,189 @@
+<div class="container">
+  <hr>
+
+  <div class="d-flex justify-content-end">
+    <button type="button-end" (click)="openModalAddP()" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addModal">
+      Nuevo Personal
+    </button>
+  
+  </div>
+
+  <table class="table table-hover">
+    
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>TipoDoc</th>
+        <th>NumeroDoc</th>
+        <th>ApPaterno</th>
+        <th>ApMaterno</th>
+        <th>Nombre1</th>
+        <th>Nombre2</th>
+        <th>NombreCompleto</th>
+        <th>FechaNac</th>
+        <th>FechaIngreso</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let person of personalList">
+        <td>{{ person.idPersonal }} </td>
+        <td>{{ person.TipoDoc }}</td>
+        <td>{{ person.NumeroDoc }}</td>
+        <td>{{ person.ApPaterno }}</td>
+        <td>{{ person.ApMaterno }}</td>
+        <td>{{ person.Nombre1 }}</td>
+        <td>{{ person.Nombre2 }}</td>
+        <td>{{ person.NombreCompleto }}</td>
+        <td>{{ person.FechaNac }}</td>
+        <td>{{ person.FechaIngreso }}</td>
+        <td>
+          <button class="btn btn-primary">Ver</button>
+        </td>
+        <td>
+          <button class="btn btn-info" (click)="openModalModP(person)">Editar</button>
+        </td>
+        <td>
+          <button class="btn btn-danger">Borrar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<div class="modal" id="addModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Modal Heading</h4>
+        <button type="button" class="btn-close" (click)="closeModalAddP()" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form (ngSubmit)="submitModalAddP()">
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="tipoDoc" class="form-label">Tipo Doc:</label>
+              <select class="form-select" id="tipoDoc" [(ngModel)]="newPerson.TipoDoc" name="tipoDoc" required>
+                <option value="" selected></option>
+                <option value="DNI">DNI</option>
+                <option value="Pasaporte">PASAPORTE</option>
+                </select>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="numeroDoc" class="form-label">Numero Doc:</label>
+              <input type="text" class="form-control" id="numeroDoc" [(ngModel)]="newPerson.NumeroDoc" name="numeroDoc" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="apPaterno" class="form-label">Ap Paterno:</label>
+              <input type="text" class="form-control" id="apPaterno" [(ngModel)]="newPerson.ApPaterno" name="apPaterno" required>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="apMaterno" class="form-label">Ap Materno:</label>
+              <input type="text" class="form-control" id="apMaterno" [(ngModel)]="newPerson.ApMaterno" name="apMaterno" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="nombre1" class="form-label">Nombre 1:</label>
+              <input type="text" class="form-control" [(ngModel)]="newPerson.Nombre1" name="nombre1" required>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="nombre2" class="form-label">Nombre 2:</label>
+              <input type="text" class="form-control" id="nombre2" [(ngModel)]="newPerson.Nombre2" name="nombre2" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="nombreCompleto" class="form-label">Nombre Completo:</label>
+              <input type="text" class="form-control" id="nombreCompleto" [(ngModel)]="newPerson.NombreCompleto" name="nombreCompleto" required>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="fechaNac" class="form-label">Fecha Nac:</label>
+              <input type="date" class="form-control" id="fechaNac" [(ngModel)]="newPerson.FechaNac" name="fechaNac" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="fechaIngreso" class="form-label">Fecha Ingreso:</label>
+              <input type="date" class="form-control" id="fechaIngreso" [(ngModel)]="newPerson.FechaIngreso" name="fechaIngreso" required>
+            </div>
+            <div class="col-md-6 mb-3">
+              </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="modal" id="ModifyModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Modal Heading</h4>
+          <button type="button" class="btn-close" (click)="closeModalAddP()" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form (ngSubmit)="submitModalAddP()">
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="tipoDoc" class="form-label">Tipo Doc:</label>
+                <select class="form-select" id="tipoDoc" [(ngModel)]="newPerson.TipoDoc" name="tipoDoc" required>
+                  <option value="" selected></option>
+                  <option value="DNI">DNI</option>
+                  <option value="Pasaporte">PASAPORTE</option>
+                  </select>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="numeroDoc" class="form-label">Numero Doc:</label>
+                <input type="text" class="form-control" id="numeroDoc" [(ngModel)]="newPerson.NumeroDoc" name="numeroDoc" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="apPaterno" class="form-label">Ap Paterno:</label>
+                <input type="text" class="form-control" id="apPaterno" [(ngModel)]="newPerson.ApPaterno" name="apPaterno" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="apMaterno" class="form-label">Ap Materno:</label>
+                <input type="text" class="form-control" id="apMaterno" [(ngModel)]="newPerson.ApMaterno" name="apMaterno" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="nombre1" class="form-label">Nombre 1:</label>
+                <input type="text" class="form-control" id="nombre1" [(ngModel)]="newPerson.Nombre1" name="nombre1" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="nombre2" class="form-label">Nombre 2:</label>
+                <input type="text" class="form-control" id="nombre2" [(ngModel)]="newPerson.Nombre2" name="nombre2" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="nombreCompleto" class="form-label">Nombre Completo:</label>
+                <input type="text" class="form-control" id="nombreCompleto" [(ngModel)]="newPerson.NombreCompleto" name="nombreCompleto" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="fechaNac" class="form-label">Fecha Nac:</label>
+                <input type="date" class="form-control" id="fechaNac" [(ngModel)]="newPerson.FechaNac" name="fechaNac" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="fechaIngreso" class="form-label">Fecha Ingreso:</label>
+                <input type="date" class="form-control" id="fechaIngreso" [(ngModel)]="newPerson.FechaIngreso" name="fechaIngreso" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
