@@ -11,13 +11,12 @@ namespace MCAPI.Data
     public class HijosData
     {
 
-        public static bool Registrar(Hijo hijo)
+        public static bool Insert(Hijo hijo)
         {
             using (SqlConnection connection = new SqlConnection(Connection.connectionString))
             {
                 SqlCommand cmd = new SqlCommand("InsertHijo", connection);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@idPersonal", hijo.IdPersonal);
                 cmd.Parameters.AddWithValue("@TipoDoc", hijo.TipoDoc);
                 cmd.Parameters.AddWithValue("@NumeroDoc", hijo.NumeroDoc);
                 cmd.Parameters.AddWithValue("@ApPaterno", hijo.ApPaterno);
@@ -40,13 +39,12 @@ namespace MCAPI.Data
             }
         }
 
-        public static bool Modificar(Hijo hijo)
+        public static bool Modify(Hijo hijo)
         {
             using (SqlConnection connection = new SqlConnection(Connection.connectionString))
             {
                 SqlCommand cmd = new SqlCommand("UpdateHijo", connection);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@idHijo", hijo.IdHijo);
                 cmd.Parameters.AddWithValue("@idPersonal", hijo.IdPersonal);
                 cmd.Parameters.AddWithValue("@TipoDoc", hijo.TipoDoc);
                 cmd.Parameters.AddWithValue("@NumeroDoc", hijo.NumeroDoc);
@@ -155,7 +153,7 @@ namespace MCAPI.Data
             }
         }
 
-        public static bool Eliminar(int idHijo)
+        public static bool Delete(int idHijo)
         {
             using (SqlConnection connection = new SqlConnection(Connection.connectionString))
             {

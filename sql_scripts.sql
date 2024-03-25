@@ -29,6 +29,7 @@ CREATE TABLE HIJOS(
 );
 
 
+
 INSERT INTO PERSONAL 
 (TipoDoc, NumeroDoc, ApPaterno, ApMaterno, Nombre1, Nombre2, NombreCompleto, FechaNac, FechaIngreso)
 VALUES 

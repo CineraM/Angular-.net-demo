@@ -1,12 +1,128 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Matias\\Documents\\GitHub\\Angular-.net-demo\\server\\MCAPI\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7D6BE31A-12E5-42A9-94AA-4C5AB7F58CD9}|MCAPI\\MCAPI.csproj|c:\\users\\matias\\documents\\github\\angular-.net-demo\\server\\mcapi\\mcapi\\data\\personaldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D6BE31A-12E5-42A9-94AA-4C5AB7F58CD9}|MCAPI\\MCAPI.csproj|solutionrelative:mcapi\\data\\personaldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D6BE31A-12E5-42A9-94AA-4C5AB7F58CD9}|MCAPI\\MCAPI.csproj|c:\\users\\matias\\documents\\github\\angular-.net-demo\\server\\mcapi\\mcapi\\data\\hijosdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D6BE31A-12E5-42A9-94AA-4C5AB7F58CD9}|MCAPI\\MCAPI.csproj|solutionrelative:mcapi\\data\\hijosdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D6BE31A-12E5-42A9-94AA-4C5AB7F58CD9}|MCAPI\\MCAPI.csproj|c:\\users\\matias\\documents\\github\\angular-.net-demo\\server\\mcapi\\mcapi\\controllers\\personalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D6BE31A-12E5-42A9-94AA-4C5AB7F58CD9}|MCAPI\\MCAPI.csproj|solutionrelative:mcapi\\controllers\\personalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D6BE31A-12E5-42A9-94AA-4C5AB7F58CD9}|MCAPI\\MCAPI.csproj|c:\\users\\matias\\documents\\github\\angular-.net-demo\\server\\mcapi\\mcapi\\app_start\\webapiconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D6BE31A-12E5-42A9-94AA-4C5AB7F58CD9}|MCAPI\\MCAPI.csproj|solutionrelative:mcapi\\app_start\\webapiconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D6BE31A-12E5-42A9-94AA-4C5AB7F58CD9}|MCAPI\\MCAPI.csproj|c:\\users\\matias\\documents\\github\\angular-.net-demo\\server\\mcapi\\mcapi\\controllers\\hijoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D6BE31A-12E5-42A9-94AA-4C5AB7F58CD9}|MCAPI\\MCAPI.csproj|solutionrelative:mcapi\\controllers\\hijoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D6BE31A-12E5-42A9-94AA-4C5AB7F58CD9}|MCAPI\\MCAPI.csproj|c:\\users\\matias\\documents\\github\\angular-.net-demo\\server\\mcapi\\mcapi\\data\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D6BE31A-12E5-42A9-94AA-4C5AB7F58CD9}|MCAPI\\MCAPI.csproj|solutionrelative:mcapi\\data\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 67,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "WebApiConfig.cs",
+              "DocumentMoniker": "C:\\Users\\Matias\\Documents\\GitHub\\Angular-.net-demo\\server\\MCAPI\\MCAPI\\App_Start\\WebApiConfig.cs",
+              "RelativeDocumentMoniker": "MCAPI\\App_Start\\WebApiConfig.cs",
+              "ToolTip": "C:\\Users\\Matias\\Documents\\GitHub\\Angular-.net-demo\\server\\MCAPI\\MCAPI\\App_Start\\WebApiConfig.cs",
+              "RelativeToolTip": "MCAPI\\App_Start\\WebApiConfig.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T22:35:35.703Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PersonalData.cs",
+              "DocumentMoniker": "C:\\Users\\Matias\\Documents\\GitHub\\Angular-.net-demo\\server\\MCAPI\\MCAPI\\Data\\PersonalData.cs",
+              "RelativeDocumentMoniker": "MCAPI\\Data\\PersonalData.cs",
+              "ToolTip": "C:\\Users\\Matias\\Documents\\GitHub\\Angular-.net-demo\\server\\MCAPI\\MCAPI\\Data\\PersonalData.cs",
+              "RelativeToolTip": "MCAPI\\Data\\PersonalData.cs",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAYwB4AAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T21:05:19.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HijosData.cs",
+              "DocumentMoniker": "C:\\Users\\Matias\\Documents\\GitHub\\Angular-.net-demo\\server\\MCAPI\\MCAPI\\Data\\HijosData.cs",
+              "RelativeDocumentMoniker": "MCAPI\\Data\\HijosData.cs",
+              "ToolTip": "C:\\Users\\Matias\\Documents\\GitHub\\Angular-.net-demo\\server\\MCAPI\\MCAPI\\Data\\HijosData.cs",
+              "RelativeToolTip": "MCAPI\\Data\\HijosData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T22:41:18.116Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 76,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HijosController.cs",
+              "DocumentMoniker": "C:\\Users\\Matias\\Documents\\GitHub\\Angular-.net-demo\\server\\MCAPI\\MCAPI\\Controllers\\HijosController.cs",
+              "RelativeDocumentMoniker": "MCAPI\\Controllers\\HijosController.cs",
+              "ToolTip": "C:\\Users\\Matias\\Documents\\GitHub\\Angular-.net-demo\\server\\MCAPI\\MCAPI\\Controllers\\HijosController.cs",
+              "RelativeToolTip": "MCAPI\\Controllers\\HijosController.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABkAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T21:49:59.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PersonalController.cs",
+              "DocumentMoniker": "C:\\Users\\Matias\\Documents\\GitHub\\Angular-.net-demo\\server\\MCAPI\\MCAPI\\Controllers\\PersonalController.cs",
+              "RelativeDocumentMoniker": "MCAPI\\Controllers\\PersonalController.cs",
+              "ToolTip": "C:\\Users\\Matias\\Documents\\GitHub\\Angular-.net-demo\\server\\MCAPI\\MCAPI\\Controllers\\PersonalController.cs",
+              "RelativeToolTip": "MCAPI\\Controllers\\PersonalController.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T21:44:45.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Connection.cs",
+              "DocumentMoniker": "C:\\Users\\Matias\\Documents\\GitHub\\Angular-.net-demo\\server\\MCAPI\\MCAPI\\Data\\Connection.cs",
+              "RelativeDocumentMoniker": "MCAPI\\Data\\Connection.cs",
+              "ToolTip": "C:\\Users\\Matias\\Documents\\GitHub\\Angular-.net-demo\\server\\MCAPI\\MCAPI\\Data\\Connection.cs",
+              "RelativeToolTip": "MCAPI\\Data\\Connection.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAACPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T22:39:40.092Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

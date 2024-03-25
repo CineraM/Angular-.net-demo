@@ -10,13 +10,12 @@ namespace MCAPI.Data
 {
     public class PersonalData
     {
-        public static bool Registrar(Personal oPersonal)
+        public static bool Insert(Personal oPersonal)
         {
             using (SqlConnection connection = new SqlConnection(Connection.connectionString))
             {
                 SqlCommand cmd = new SqlCommand("InsertPersonal", connection);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@idPersonal", oPersonal.idPersonal);
                 cmd.Parameters.AddWithValue("@TipoDoc", oPersonal.TipoDoc);
                 cmd.Parameters.AddWithValue("@NumeroDoc", oPersonal.NumeroDoc);
                 cmd.Parameters.AddWithValue("@ApPaterno", oPersonal.ApPaterno);
@@ -33,21 +32,22 @@ namespace MCAPI.Data
                     cmd.ExecuteNonQuery();
                     return true;
                 }
-                catch (Exception ex)
+                catch (SqlException ex)
                 {
+                    // Log the exception with details
+                    Console.WriteLine($"Error inserting personal data: {ex.Message}");
                     return false;
                 }
             }
         }
 
 
-        public static bool Modificar(Personal oPersonal)
+        public static bool Modify(Personal oPersonal)
         {
             using (SqlConnection connection = new SqlConnection(Connection.connectionString))
             {
                 SqlCommand cmd = new SqlCommand("UpdatePersonal", connection);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@idPersonal", oPersonal.idPersonal);
                 cmd.Parameters.AddWithValue("@TipoDoc", oPersonal.TipoDoc);
                 cmd.Parameters.AddWithValue("@NumeroDoc", oPersonal.NumeroDoc);
                 cmd.Parameters.AddWithValue("@ApPaterno", oPersonal.ApPaterno);
@@ -94,7 +94,7 @@ namespace MCAPI.Data
 
                                idPersonal = Convert.ToInt32(dr["idPersonal"]),
                                TipoDoc = dr["TipoDoc"].ToString(),
-                               NumeroDoc = dr["ApPaterno"].ToString(),
+                               NumeroDoc = dr["NumeroDoc"].ToString(),
                                ApPaterno = dr["ApPaterno"].ToString(),
                                ApMaterno = dr["ApMaterno"].ToString(),
                                Nombre1 = dr["Nombre1"].ToString(),
@@ -140,7 +140,7 @@ namespace MCAPI.Data
                             {
                                 idPersonal = Convert.ToInt32(dr["idPersonal"]),
                                 TipoDoc = dr["TipoDoc"].ToString(),
-                                NumeroDoc = dr["ApPaterno"].ToString(),
+                                NumeroDoc = dr["NumeroDoc"].ToString(),
                                 ApPaterno = dr["ApPaterno"].ToString(),
                                 ApMaterno = dr["ApMaterno"].ToString(),
                                 Nombre1 = dr["Nombre1"].ToString(),
@@ -154,7 +154,6 @@ namespace MCAPI.Data
                     }
 
 
-
                     return personal;
                 }
                 catch (Exception ex)
@@ -166,7 +165,7 @@ namespace MCAPI.Data
 
 
 
-        public static bool Eliminar(int id)
+        public static bool Delete(int id)
         {
             using (SqlConnection connection = new SqlConnection(Connection.connectionString))
             {
